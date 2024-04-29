@@ -6,6 +6,7 @@ import Ingredients from "./components/pages/Ingredients"
 import LandingPage from "./components/pages/LandingPage"
 import Recipe from "./components/pages/Recipe"
 import Navbar from "./components/navbar.jsx"
+import Groceries from "./components/pages/Groceries"
 
 function App() {
 
@@ -15,13 +16,15 @@ function App() {
         <BrowserRouter>
           <Header />
           <Navbar />
-          <div style={{ marginLeft: '2em', marginTop: '1em' }}>
+          <div style={{ marginLeft: '2.2em', marginTop: '1em' }}>
           <Routes>
             <Route path="/" element={<LandingPage />} />
             <Route path="/dietary" element={<Dietary />} />
             <Route path="/allergies" element={<Allergies />} />
             <Route path="/ingredients" element={<Ingredients />} />
             <Route path="/recipe" element={<Recipe />} />
+            <Route path="/groceries" element={<Groceries />} />
+
           </Routes>
           </div>
         </BrowserRouter>

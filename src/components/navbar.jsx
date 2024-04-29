@@ -43,29 +43,43 @@ const Navbar = () => {
                         </svg>
                     </h1></div>
                     <div className='navContainer'>
-                        <div className='recept' onClick={() => toggleSubmenu('recipes')}>
-                            <p>recipes</p>
+                    <div className='recept' onClick={() => toggleSubmenu('recipes')}>
+                            <p>recipes<span className={`menu-arrow ${submenuVisible.recipes ? 'rotate' : ''}`}><svg fill="#6F6F6F" height="15px" width="15px" viewBox="0 0 330 330" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M325.607,79.393c-5.857-5.857-15.355-5.858-21.213,0.001l-139.39,139.393L25.607,79.393
+                                c-5.857-5.857-15.355-5.858-21.213,0.001c-5.858,5.858-5.858,15.355,0,21.213l150.004,150c2.813,2.813,6.628,4.393,10.606,4.393
+                                s7.794-1.581,10.606-4.394l149.996-150C331.465,94.749,331.465,85.251,325.607,79.393z"/>
+                            </svg></span></p>
                             {submenuVisible.recipes && (
-                                <div className='submenu'>
-                                    <div onClick={() => handleMenuClick('/Recipe')} style={{ backgroundColor: '#D9D9D9' }}>
+    <div className={`submenu ${submenuVisible.recipes ? 'submenu-visible' : ''}`}>
+    <div onClick={() => handleMenuClick('/Recipe')} style={{ backgroundColor: '#D9D9D9' }}>
                                         <div className='subtext'>create recipe</div>
-                                         </div>
+                                    </div>
                                     <div onClick={() => handleMenuClick('/Recipe')} style={{ backgroundColor: '#D9D9D9' }}>
-                                         <div className='subtext'>save recipe</div>
-                                            </div>
+                                        <div className='subtext'>save recipe</div>
+                                    </div>
                                 </div>
                             )}
-                        </div>
+                     </div>         
+
                         <div className='minSida' onClick={() => toggleSubmenu('myPage')}>
-                            <p>my page</p>
+                            <p>my page<span className={`menu-arrow2 ${submenuVisible.myPage ? 'rotate' : ''}`}><svg fill="#6F6F6F" height="15px" width="15px" viewBox="0 0 330 330" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M325.607,79.393c-5.857-5.857-15.355-5.858-21.213,0.001l-139.39,139.393L25.607,79.393
+                                c-5.857-5.857-15.355-5.858-21.213,0.001c-5.858,5.858-5.858,15.355,0,21.213l150.004,150c2.813,2.813,6.628,4.393,10.606,4.393
+                                s7.794-1.581,10.606-4.394l149.996-150C331.465,94.749,331.465,85.251,325.607,79.393z"/>
+                            </svg></span></p>
                             {submenuVisible.myPage && (
-                                <div className='submenu'>
-                                    <div onClick={() => handleMenuClick('/Ingredients')} style={{ backgroundColor: '#D9D9D9' }}> <div className='subtext'>pantry</div></div>
-                                    <div onClick={() => handleMenuClick('/Allergies')} style={{ backgroundColor: '#D9D9D9' }}> <div className='subtext'>preferences</div></div>
+    <div className={`submenu ${submenuVisible.myPage ? 'submenu-visible' : ''}`}>
+    <div onClick={() => handleMenuClick('/Ingredients')} style={{ backgroundColor: '#D9D9D9' }}>
+                                        <div className='subtext'>pantry</div>
+                                    </div>
+                                    <div onClick={() => handleMenuClick('/Allergies')} style={{ backgroundColor: '#D9D9D9' }}>
+                                        <div className='subtext'>preferences</div>
+                                    </div>
                                 </div>
                             )}
                         </div>
-                        <div className='inkopslista' onClick={() => handleMenuClick('/Ingredients')}>
+
+                        <div className='inkopslista' onClick={() => handleMenuClick('/Groceries')}>
                             <p>groceries</p>
                         </div>
                     </div>
