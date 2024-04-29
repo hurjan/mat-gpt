@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import { useState, useRef } from 'react';
 import './navbar.css';
 import { useNavigate } from 'react-router-dom';
 
@@ -23,7 +23,7 @@ const Navbar = () => {
             currentSubmenu.style.height = '0px';
             setTimeout(() => {
                 setSubmenuVisible(prev => ({ ...prev, [name]: false }));
-            }, 300); // Transition time matches CSS for smoothness
+            }, 50); // Transition time matches CSS for smoothness
         } else {
             // Expand the submenu
             const scrollHeight = currentSubmenu.scrollHeight;
@@ -55,17 +55,19 @@ const Navbar = () => {
                     </h1></div>
                     <div className='navContainer'>
                         {['recipes', 'my page', 'groceries'].map(item => (
-                            <div key={item} className='menu-item' onClick={() => toggleSubmenu(item)}>
+                            <div key={item} className='menu-item' onClick={() => item !== 'groceries' ? toggleSubmenu(item) : handleMenuClick('/groceries')}>
                                 <p>
                                     {item}
-                                    {item !== 'groceries' && <span className={`menu-arrow ${submenuVisible[item] ? 'rotate' : ''}`}>
+                                    {item !== 'groceries' && 
+                                    <span className={`menu-arrow ${submenuVisible[item] ? 'rotate' : ''}`}>
                                         <svg fill="#6F6F6F" height="15px" width="15px" viewBox="0 0 330 330" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M325.607,79.393c-5.857-5.857-15.355-5.858-21.213,0.001l-139.39,139.393L25.607,79.393
                                             c-5.857-5.857-15.355-5.858-21.213,0.001c-5.858,5.858-5.858,15.355,0,21.213l150.004,150c2.813,2.813,6.628,4.393,10.606,4.393
                                             s7.794-1.581,10.606-4.394l149.996-150C331.465,94.749,331.465,85.251,325.607,79.393z"/>
-                                        </svg></span>}
+                                        </svg>
+                                    </span>}
                                 </p>
-                                <div ref={el => submenuRefs.current[item] = el} style={{
+                                {item !== 'groceries' && <div ref={el => submenuRefs.current[item] = el} style={{
                                     overflow: 'hidden',
                                     height: '0px', // Initially hidden
                                     transition: 'height 0.3s ease-in-out'
@@ -73,16 +75,16 @@ const Navbar = () => {
                                     {item === 'recipes' && (
                                         <div style={{padding: '5px', backgroundColor: '#D9D9D9'}}>
                                             <div onClick={() => handleMenuClick('/Recipe')} className='subtext'>create recipe</div>
-                                            <div onClick={() => handleMenuClick('/Recipe')} className='subtext'>save Recipe</div>
+                                            <div onClick={() => handleMenuClick('/Recipe')} className='subtext'>save recipe</div>
                                         </div>
                                     )}
                                     {item === 'my page' && (
                                         <div style={{padding: '5px', backgroundColor: '#D9D9D9'}}>
-                                            <div onClick={() => handleMenuClick('/Ingredients')} className='subtext'>pantry</div>
+                                            <div onClick={() => handleMenuClick('/Ingredients')} className='subtext'>fridge / pantry</div>
                                             <div onClick={() => handleMenuClick('/Allergies')} className='subtext'>preferences</div>
                                         </div>
                                     )}
-                                </div>
+                                </div>}
                             </div>
                         ))}
                     </div>
@@ -91,5 +93,6 @@ const Navbar = () => {
             <div className={overlayClass} onClick={toggleMenu}></div>
         </div>
     );
+    
 }
 export default Navbar;

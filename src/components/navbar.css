@@ -1,23 +1,36 @@
-.menu-arrow svg {
-    vertical-align: middle; /* Aligns the icon with the text */
-    transition: transform 0.3s ease; /* Ensure smooth transform transition */
-    position: absolute;
+.menu-arrow svg, 
+.menu-arrow2 svg, 
+.subtext, 
+.navContainer p, 
+.foodgpt {
+    user-select: none; /* Disables text selection */
 }
 
-.menu-arrow2 svg {
+
+.menu-arrow svg {
+    margin-left: -0.6em;
     vertical-align: middle; /* Aligns the icon with the text */
     transition: transform 0.3s ease; /* Ensure smooth transform transition */
     position: absolute;
 }
+.menu-arrow2 svg {
+    margin-left: 0.5em;
+    vertical-align: middle; /* Aligns the icon with the text */
+    transition: transform 0.3s ease; /* Ensure smooth transform transition */
+    position: absolute;
+    color: blue; /* Example to change color, adjust as needed */
+}
+
 .rotate svg {
     transform: rotate(180deg); /* Rotates the SVG when the submenu is visible */
 }
+
 
 .menu-arrow{
     margin-top: 12px;
     position: absolute;
     margin-left: 81px;
-    transition: transform 0.3s ease; /* Smooth transform on toggle */
+    transition: transform 0.2s ease; /* Smooth transform on toggle */
 
 }
 
@@ -25,7 +38,7 @@
     margin-top: 12px;
     position: absolute;
     margin-left: 65px;
-    transition: transform 0.3s ease; /* Smooth transform on toggle */
+    transition: transform 0.2s ease; /* Smooth transform on toggle */
 
 }
 .subtext {
@@ -35,6 +48,7 @@
 
 .menu-item {
     margin-bottom: -20px; /* Adjust the margin as needed */
+    cursor: pointer;
 }
 .submenu {
     overflow: hidden;
@@ -206,21 +220,22 @@ nav {
     to { transform: translateX(-100%); opacity: 0; }
 }
 
-
 .overlay {
     position: fixed; /* Fixed to cover the entire viewport */
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.65); /* Black with 70% opacity */
+    background-color: rgba(0, 0, 0, 0.3); /* Black with 70% opacity */
     opacity: 0;
-    transition: opacity 0.2s ease-in-out;
+    transition: opacity 0.2s ease-in-out, backdrop-filter 0.4s ease-in-out; /* Add transition for backdrop-filter */
     pointer-events: none; /* Allows clicks to pass through when not visible */
     z-index: 1; /* Ensure this is below the menu but above other content */
+    backdrop-filter: blur(0px); /* Start with no blur */
 }
 
 /* Only show the overlay when the menu is visible */
 .overlay.visible {
     opacity: 1;
+    backdrop-filter: blur(2px); /* Apply blur effect when visible */
 }
