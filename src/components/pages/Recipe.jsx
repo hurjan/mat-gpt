@@ -1,7 +1,6 @@
 function Recipe() {
     return (
-        <h2>Recipe</h2>
-    )
+<p>recipe</p>    )
 }
 
 export default Recipe

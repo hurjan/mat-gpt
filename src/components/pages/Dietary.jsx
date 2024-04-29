@@ -1,7 +1,6 @@
 function Dietary() {
     return (
-        <h2>Dietary</h2>
-    )
+<p>dietary</p>    )
 }
 
 export default Dietary
