@@ -1,0 +1,15 @@
+
+
+.headerbar {
+    z-index: 1000;
+/*     background-color: aquamarine;
+ */
+}
+
+
+.headerbar p {
+    margin-left: 0.8em;
+    font-size: 42px;
+    font-weight: 550;
+    margin-top: 0.5em;
+}

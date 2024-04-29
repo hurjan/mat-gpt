@@ -1,6 +1,11 @@
+import './Header.css'; // Ensure this path matches your file structure
+
+
 function Header() {
     return (
-        <h1>Food GPT</h1>
+        <div className='headerbar'>
+        <p>foodgpt</p>
+        </div>
     )
 }
 
