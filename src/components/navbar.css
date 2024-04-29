@@ -14,7 +14,7 @@
     position: absolute;
 }
 .menu-arrow2 svg {
-    margin-left: 0.5em;
+    margin-left: -0.44em;
     vertical-align: middle; /* Aligns the icon with the text */
     transition: transform 0.3s ease; /* Ensure smooth transform transition */
     position: absolute;
