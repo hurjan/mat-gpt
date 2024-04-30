@@ -46,7 +46,7 @@ const Navbar = () => {
                     <div className='borgir'><h1>≡</h1></div>
                 </div>
                 <div className={menuClass}>
-                    <div className='foodgpt'><p>foodgpt</p></div>
+                    <div className='foodgpt'><p>FoodGPT</p></div>
                     <div className='navBarExit' onClick={toggleMenu}><h1>
                         <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="feather feather-x">
                             <line x1="18" y1="6" x2="6" y2="18"></line>
@@ -54,7 +54,7 @@ const Navbar = () => {
                         </svg>
                     </h1></div>
                     <div className='navContainer'>
-                        {['recipes', 'my food', 'groceries'].map(item => (
+                        {['Recipes', 'My food', 'Groceries'].map(item => (
                             <div key={item} className='menu-item' onClick={() => item !== 'groceries' ? toggleSubmenu(item) : handleMenuClick('/groceries')}>
                                 <p>
                                     {item}
@@ -74,14 +74,14 @@ const Navbar = () => {
                                 }}>
                                     {item === 'recipes' && (
                                         <div style={{padding: '5px', backgroundColor: '#D9D9D9'}}>
-                                            <div onClick={() => handleMenuClick('/Recipe')} className='subtext'>create recipe</div>
-                                            <div onClick={() => handleMenuClick('/Recipe')} className='subtext'>saved recipes</div>
+                                            <div onClick={() => handleMenuClick('/Recipe')} className='subtext'>Create recipe</div>
+                                            <div onClick={() => handleMenuClick('/Recipe')} className='subtext'>Saved recipes</div>
                                         </div>
                                     )}
                                     {item === 'my food' && (
                                         <div style={{padding: '5px', backgroundColor: '#D9D9D9'}}>
-                                            <div onClick={() => handleMenuClick('/Ingredients')} className='subtext'>pantry</div>
-                                            <div onClick={() => handleMenuClick('/Allergies')} className='subtext'>preferences</div>
+                                            <div onClick={() => handleMenuClick('/Ingredients')} className='subtext'>Pantry</div>
+                                            <div onClick={() => handleMenuClick('/Allergies')} className='subtext'>Preferences</div>
                                         </div>
                                     )}
                                 </div>}
