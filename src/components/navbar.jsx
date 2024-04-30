@@ -77,8 +77,8 @@ const Navbar = () => {
                                 }}>
                                     {item === 'Recipes' && (
                                         <div style={{padding: '5px', backgroundColor: '#D9D9D9'}}>
-                                            <div onClick={() => handleMenuClick('/Recipe')} className='subtext'>Create recipe</div>
-                                            <div onClick={() => handleMenuClick('/Recipe')} className='subtext'>Saved recipes</div>
+                                            <div onClick={() => handleMenuClick('/CreateRecipe')} className='subtext'>Create recipe</div>
+                                            <div onClick={() => handleMenuClick('/SavedRecipe')} className='subtext'>Saved recipes</div>
                                         </div>
                                     )}
                                     {item === 'My food' && (

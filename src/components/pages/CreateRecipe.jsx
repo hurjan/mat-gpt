@@ -1,6 +1,6 @@
-import './Recipe.css';
+import './CreateRecipe.css';
 
-function Recipe() {
+function CreateRecipe() {
     return (
         <div className="recipe-container">
         <div className="square"></div>
@@ -9,4 +9,4 @@ function Recipe() {
   )
 }
 
-export default Recipe
+export default CreateRecipe;

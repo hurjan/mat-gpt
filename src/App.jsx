@@ -4,7 +4,8 @@ import Allergies from "./components/pages/Allergies"
 import Dietary from "./components/pages/Dietary"
 import Ingredients from "./components/pages/Ingredients"
 import LandingPage from "./components/pages/LandingPage"
-import Recipe from "./components/pages/Recipe"
+import CreateRecipe from "./components/pages/CreateRecipe"
+import SavedRecipe from "./components/pages/SavedRecipe"
 import Navbar from "./components/navbar.jsx"
 import Groceries from "./components/pages/Groceries"
 
@@ -22,7 +23,8 @@ function App() {
             <Route path="/dietary" element={<Dietary />} />
             <Route path="/allergies" element={<Allergies />} />
             <Route path="/ingredients" element={<Ingredients />} />
-            <Route path="/recipe" element={<Recipe />} />
+            <Route path="/CreateRecipe" element={<CreateRecipe />} />
+            <Route path="/SavedRecipe" element={<SavedRecipe />} />
             <Route path="/groceries" element={<Groceries />} />
 
           </Routes>
