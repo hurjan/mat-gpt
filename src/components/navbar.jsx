@@ -46,7 +46,10 @@ const Navbar = () => {
                     <div className='borgir'><h1>≡</h1></div>
                 </div>
                 <div className={menuClass}>
-                    <div className='foodgpt'><p>FoodGPT</p></div>
+                <div className='foodgpt' >
+                <a href="/" style={{ textDecoration: 'none', color: 'inherit' }}><p>FoodGPT</p></a>
+                </div>
+
                     <div className='navBarExit' onClick={toggleMenu}><h1>
                         <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="feather feather-x">
                             <line x1="18" y1="6" x2="6" y2="18"></line>
@@ -55,10 +58,10 @@ const Navbar = () => {
                     </h1></div>
                     <div className='navContainer'>
                         {['Recipes', 'My food', 'Groceries'].map(item => (
-                            <div key={item} className='menu-item' onClick={() => item !== 'groceries' ? toggleSubmenu(item) : handleMenuClick('/groceries')}>
+                            <div key={item} className='menu-item' onClick={() => item !== 'Groceries' ? toggleSubmenu(item) : handleMenuClick('/groceries')}>
                                 <p>
                                     {item}
-                                    {item !== 'groceries' && 
+                                    {item !== 'Groceries' && 
                                     <span className={`menu-arrow${item === 'my food' ? '2' : ''} ${submenuVisible[item] ? 'rotate' : ''}`}>
                                         <svg fill="#6F6F6F" height="15px" width="15px" viewBox="0 0 330 330" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M325.607,79.393c-5.857-5.857-15.355-5.858-21.213,0.001l-139.39,139.393L25.607,79.393
@@ -72,13 +75,13 @@ const Navbar = () => {
                                     height: '0px', // Initially hidden
                                     transition: 'height 0.3s ease-in-out'
                                 }}>
-                                    {item === 'recipes' && (
+                                    {item === 'Recipes' && (
                                         <div style={{padding: '5px', backgroundColor: '#D9D9D9'}}>
                                             <div onClick={() => handleMenuClick('/Recipe')} className='subtext'>Create recipe</div>
                                             <div onClick={() => handleMenuClick('/Recipe')} className='subtext'>Saved recipes</div>
                                         </div>
                                     )}
-                                    {item === 'my food' && (
+                                    {item === 'My food' && (
                                         <div style={{padding: '5px', backgroundColor: '#D9D9D9'}}>
                                             <div onClick={() => handleMenuClick('/Ingredients')} className='subtext'>Pantry</div>
                                             <div onClick={() => handleMenuClick('/Allergies')} className='subtext'>Preferences</div>
