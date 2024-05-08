@@ -46,8 +46,8 @@ const Navbar = () => {
                     <div className='borgir'><h1>≡</h1></div>
                 </div>
                 <div className={menuClass}>
-                <div className='foodgpt' >
-                <a href="/" style={{ textDecoration: 'none', color: 'inherit' }}><p>FoodGPT</p></a>
+                <div className='Chefbot' >
+                <a href="/" style={{ textDecoration: 'none', color: 'inherit' }}><p>ChefBot</p></a>
                 </div>
 
                     <div className='navBarExit' onClick={toggleMenu}><h1>

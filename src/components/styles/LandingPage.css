@@ -1,5 +1,5 @@
 .headerbar{
-    display: none;
+    
 }
 
 .heading{
@@ -10,7 +10,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 95vh;
+    height: 80vh;
  
 }
 

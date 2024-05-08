@@ -1,11 +1,12 @@
 import "../styles/LandingPage.css"
 
+
 function LandingPage() {
     return (
         <div className="container">
-            <h1 className="heading">Chefbot</h1>
+            <h1 className="heading">ChefBot</h1>
             <div className="button-group">
-                <button className="button">Create Recipe</button>
+               <a href="/Diet"><button className="button">Create Recipe</button></a> 
                 <button className="button">Log In</button>
             </div>
         </div>
