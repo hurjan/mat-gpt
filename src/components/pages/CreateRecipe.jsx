@@ -1,4 +1,4 @@
-import './CreateRecipe.css';
+import "../styles/CreateRecipe.css"
 
 function CreateRecipe() {
     return (

@@ -17,7 +17,7 @@ function App() {
         <BrowserRouter>
           <Header />
           <Navbar />
-          <div style={{ marginLeft: '2.2em', marginTop: '1em' }}>
+          <div style={{  marginTop: '1em' }}>
           <Routes>
             <Route path="/" element={<LandingPage />} />
             <Route path="/dietary" element={<Dietary />} />
