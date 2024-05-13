@@ -61,7 +61,7 @@ const Navbar = () => {
                     <div className={menuClass}>
                         <div className='Chefbot' >
                             <a href="/">
-                                <img className="navbarLogo" src="/images/chefbotLogo.png" alt=""/>
+                                <img className="navbarLogo" src="/images/logo.png" alt=""/>
                             </a>
                         </div>
                         <div className='navBarExit' onClick={toggleMenu}><h1>
