@@ -2,4 +2,5 @@ html {
     background-color: #EFEFEF;
     font-family: 'Open Sans', sans-serif;
     font-weight: lighter;
+    background-image: url('/images/backgroundMobile.png');
 }
