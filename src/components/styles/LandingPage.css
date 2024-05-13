@@ -14,13 +14,3 @@
  
 }
 
-.button-group {
-    display: flex;
-    flex-direction: column;
-    margin-top: 20px; 
-}
-
-.button {
-    margin: 10px;
-    padding: .5rem;
-}

@@ -3,6 +3,7 @@
 body{
     margin: 0;
     padding: 0;
+    
 
 }
 html {
@@ -10,5 +11,6 @@ html {
     font-family: 'Open Sans', sans-serif;
     font-weight: lighter;
     background-image: url('/images/backgroundMobile.png');
+    letter-spacing: .5px;
    
 }
