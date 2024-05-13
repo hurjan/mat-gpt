@@ -1,16 +1,16 @@
-.headerbar{
-    
-}
+
 
 .heading{
     width: 20rem;
 }
 .container {
+
+    background-image: url('/images/backgroundMobile.png');
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 80vh;
+    height: 100vh;
  
 }
 

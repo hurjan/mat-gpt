@@ -4,10 +4,35 @@ import "../components/styles/Buttons.css"
 function DietButtons() {
   return (
     <div className="button-container">
-   <button className="dietButton">Vegan <img src={ '/images/avocado.png'} alt="Vego image" /></button>
-      <button className="dietButton">Vego <img src={ '/images/carrot.png'} alt="Vegan image" /></button>
-      <button className="dietButton">None</button>
-      <button className="dietButton">Foodmap <img src={ '/images/fodmap.png'} alt="Foodmap image" /></button>
+      <div className="buttoncontent">
+        <button className="dietButton">
+          <div className="image-container">
+            <img src={'/images/avocado.png'} alt="Vego image" />
+          </div>
+          <span className="button-text">Vegan</span>
+        </button>
+      </div>
+      <div className="buttoncontent">
+        <button className="dietButton">
+          <div className="image-container">
+            <img src={'/images/carrot.png'} alt="Vegan image" />
+          </div>
+          <span className="button-text">Vego</span>
+        </button>
+      </div>
+      <div className="buttoncontent">
+        <button className="dietButton">
+          <span className="button-text">None</span>
+        </button>
+      </div>
+      <div className="buttoncontent">
+        <button className="dietButton">
+          <div className="image-container">
+            <img src={'/images/fodmap.png'} alt="Foodmap image" />
+          </div>
+          <span className="button-text">Foodmap</span>
+        </button>
+      </div>
     </div>
   );
 }

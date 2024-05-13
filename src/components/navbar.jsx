@@ -53,7 +53,7 @@ const Navbar = () => {
             {!isHidden && (
                 <nav>
                     <a href="/">
-                        <img className="headerLogo" src="/images/chefbotLogo.png" alt=""/>
+                        <img className="headerLogo" src="/images/logo.png" alt=""/>
                     </a>
                     <div className='burger-menu' onClick={toggleMenu}>
                         <div className='borgir'><h1>≡</h1></div>

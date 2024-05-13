@@ -120,6 +120,7 @@
   margin-top: -5em;
   /* margin-left: 1.5em; */
   height: 1.5em;
+  
 }
 
 .borgir h1 {
@@ -265,6 +266,8 @@ nav {
   width: 10rem;
   height: auto;
   margin-left: 1rem;
+  margin-bottom: .8rem;
+
 }
 .navbarLogo {
   margin-top: 2rem;
