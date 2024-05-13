@@ -8,7 +8,7 @@ function Diet() {
     <div className="dietContainer">
       <p>Do you have any special diet ?</p>
        <DietButtons/>  
-      <a href="/CreateRecipe"><button className="nextButton">Next</button></a>
+      <a href="/Allergies"><button className="nextButton">Next</button></a>
     </div>
   );
 }
