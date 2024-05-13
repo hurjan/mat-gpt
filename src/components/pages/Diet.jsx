@@ -21,7 +21,7 @@ function Diet() {
       <a href="/"><button className="ArrowButton">&lt;</button></a>
       <div className="dietContainer">
         <p>Do you have any special diets?</p>
-        <div className="selectedDietsContainer">
+        <div className="selectedContainer">
           {selectedDiets.map((diet, index) => (
             <p key={index} className="selectedDiet">{diet}</p>
           ))}

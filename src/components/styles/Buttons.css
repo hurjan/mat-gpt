@@ -115,7 +115,7 @@
 }
 
 
-.selectedDietsContainer {
+.selectedContainer {
   display: flex;
 }
 
@@ -124,4 +124,5 @@
   border-radius: 5px;
   padding: .5rem; 
   margin-right: 10px; 
+  font-size: 1rem;
 }
