@@ -9,7 +9,7 @@
 .landingButton1, .landingButton2 {
     margin: 10px;
     padding: 1rem 2rem;
-    font-size: 1rem;
+    font-size: 1.25rem;
    
 }
 .landingButton1{
@@ -71,13 +71,15 @@
   border-bottom: 4px solid #E5E5E5;
   border-radius: 10px;
   text-align: center;
+  
 }
   
   .nextButton{
-    padding: 1rem 1.5rem;
+    padding: 1rem 7.5rem;
     background-color: #1ABC9C;
     border: none;
     border-radius: 5px;
+    font-size: 1.25rem;
   }
 
   .dietButton:hover,.allergieButton:hover{
@@ -91,4 +93,5 @@
   button, .landingButton1, .landingButton2, .dietButton, .nextButton {
     letter-spacing: .5px;
     font-weight: bold;
+   
 }
