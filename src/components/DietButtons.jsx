@@ -1,11 +1,16 @@
 
 import "../components/styles/Buttons.css"
+import React from 'react';
 
-function DietButtons() {
+function DietButtons({ onButtonClick }) {
+  const handleButtonClick = (text) => {
+    onButtonClick(text); // Anropa funktionen som hanterar knapptryck och skicka med texten
+  };
+
   return (
     <div className="button-container">
       <div className="buttoncontent">
-        <button className="dietButton">
+        <button className="dietButton" onClick={() => handleButtonClick('Vegan')}>
           <div className="image-container">
             <img src={'/images/avocado.png'} alt="Vego image" />
           </div>
@@ -13,7 +18,7 @@ function DietButtons() {
         </button>
       </div>
       <div className="buttoncontent">
-        <button className="dietButton">
+        <button className="dietButton" onClick={() => handleButtonClick('Vego')}>
           <div className="image-container">
             <img src={'/images/carrot.png'} alt="Vegan image" />
           </div>
@@ -21,12 +26,12 @@ function DietButtons() {
         </button>
       </div>
       <div className="buttoncontent">
-        <button className="dietButton">
+        <button className="dietButton" onClick={() => handleButtonClick('None')}>
           <span className="button-text">None</span>
         </button>
       </div>
       <div className="buttoncontent">
-        <button className="dietButton">
+        <button className="dietButton" onClick={() => handleButtonClick('Foodmap')}>
           <div className="image-container">
             <img src={'/images/fodmap.png'} alt="Foodmap image" />
           </div>
@@ -38,3 +43,4 @@ function DietButtons() {
 }
 
 export default DietButtons;
+
