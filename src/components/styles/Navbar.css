@@ -60,6 +60,7 @@
 .submenu-visible {
     max-height: 200px; /* Adjust based on actual submenu height */
     opacity: 1;
+   
 }
 
 @keyframes submenuFade {
@@ -109,7 +110,7 @@
 
 .borgir {
     margin-top: -4em;
-    margin-left: 1.5em;
+    /* margin-left: 1.5em; */
     height: 1.5em;
 }
 
@@ -139,6 +140,7 @@ nav {
     justify-content: flex-start; /* Keep content aligned at the start */
     align-items: center; /* Center items vertically */
     padding: 1em;
+    background-color: #1ABC9C;
 }
 
 .burger-menu {
@@ -204,7 +206,8 @@ nav {
 .menu.visible {
     display: block; /* This will make the element block to trigger animation */
         animation: fadeIn 0.2s forwards;/* 'forwards' keeps the properties as at the end of the animation */
-}
+        background-color: #1ABC9C;
+    }
 
 .menu.hidden {
     animation: fadeOut 0.2s forwards;
