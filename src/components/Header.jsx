@@ -13,9 +13,10 @@ function Header() {
   // Render the header only if it's not in the hiddenRoutes
   return (
     <div className={isHidden ? "hidden" : "headerbar"}>
-      <a href="/" style={{ textDecoration: "none", color: "inherit" }}>
-        <p>ChefBot</p>
-      </a>
+     <a href="/">
+    <img className="headerLogo" src="/images/chefbotLogo.png" alt=""/>
+</a>
+
     </div>
   );
 }

@@ -108,14 +108,16 @@
 }
 
 .borgir {
-    margin-top: -7.5em;
+    margin-top: -4em;
     margin-left: 1.5em;
     height: 1.5em;
 }
 
 .borgir h1 {
+    
     font-size: 72px;
     font-weight: 200;
+   
 }
 
 

@@ -3,7 +3,7 @@
 }
 
 .heading{
-    font-size: 5rem;
+    width: 20rem;
 }
 .container {
     display: flex;
