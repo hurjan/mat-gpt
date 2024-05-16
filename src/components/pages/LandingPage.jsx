@@ -1,5 +1,6 @@
 import "../styles/LandingPage.css"
 import "../styles/Buttons.css"
+import {Link} from "react-router-dom";
 
 
 function LandingPage() {
@@ -8,7 +9,7 @@ function LandingPage() {
             <img className="heading" src="/images/chefbotLogo.png" alt="" />
             <div className="landingButton-group">
                <a href="/Diet"><button className="landingButton1">Create Recipe</button></a> 
-                <button className="landingButton2">Log In</button>
+               <Link className="landingButton2" to="/login"> Login </Link>
             </div>
         </div>
     );

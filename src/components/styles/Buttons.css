@@ -22,6 +22,8 @@
     border: 1px solid #1ABC9C;
     border-radius: 5px;
     background-color: transparent;
+    text-decoration: none;
+    color: black;
 }
 
 .ArrowButton{

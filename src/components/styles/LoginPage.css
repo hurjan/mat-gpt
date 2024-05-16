@@ -1,0 +1,38 @@
+.input{
+    display: block;
+    width:17vw;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.928;
+    color: black;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+.h1{
+  margin-bottom: 10vh;
+  font-size: 2rem;
+}
+
+.containerLogin {
+    display: flex;
+    justify-content: center;
+ 
+}
+
+.form{
+    margin-top: 10vh;
+    width: 30vw;
+    background-color: white;
+    padding: 50px;
+    border-radius: 30px;
+    border: 2px solid #1ABC9C;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+
+}
+
