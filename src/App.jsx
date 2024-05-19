@@ -9,6 +9,7 @@ import CreateRecipe from "./components/pages/CreateRecipe";
 import SavedRecipe from "./components/pages/SavedRecipe";
 import Groceries from "./components/pages/Groceries";
 import LoginPage from "./components/pages/LoginPage.jsx";
+import SignUp from "./components/pages/SignUp.jsx";
 
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
             <Route path="/SavedRecipe" element={<SavedRecipe />} />
             <Route path="/groceries" element={<Groceries />} />
             <Route path="/login" element={<LoginPage />} />
+            <Route path="/signup" element={<SignUp />} />
           </Routes>
         </div>
       </div>
