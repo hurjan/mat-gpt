@@ -6,6 +6,8 @@
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
+  font-size: 2rem;
+
 }
 
 .square {
@@ -19,4 +21,8 @@
   margin-top: 3rem;
   padding: 0.5rem 1rem;
   font-size: 1rem;
+}
+
+.dietContainer p{
+  font-size: 2rem;
 }
