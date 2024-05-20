@@ -12,7 +12,7 @@ function DietButtons({ onButtonClick }) {
       <div className="buttoncontent">
         <button className="dietButton" onClick={() => handleButtonClick('Vegan')}>
           <div className="image-container">
-            <img src={'/images/avocado.png'} alt="Vego image" />
+            <img src={'/images/vegan.png'} alt="Vego image" />
           </div>
           <span className="button-text">Vegan</span>
         </button>
@@ -20,20 +20,23 @@ function DietButtons({ onButtonClick }) {
       <div className="buttoncontent">
         <button className="dietButton" onClick={() => handleButtonClick('Vego')}>
           <div className="image-container">
-            <img src={'/images/carrot.png'} alt="Vegan image" />
+            <img src={'/images/salad.png'} alt="Vegan image" />
           </div>
           <span className="button-text">Vego</span>
         </button>
       </div>
       <div className="buttoncontent">
         <button className="dietButton" onClick={() => handleButtonClick('None')}>
+        <div className="image-container">
+            <img src={'/images/null.png'} alt="Vegan image" />
+          </div>
           <span className="button-text">None</span>
         </button>
       </div>
       <div className="buttoncontent">
         <button className="dietButton" onClick={() => handleButtonClick('Foodmap')}>
           <div className="image-container">
-            <img src={'/images/fodmap.png'} alt="Foodmap image" />
+            <img src={'/images/checklist.png'} alt="Foodmap image" />
           </div>
           <span className="button-text">Foodmap</span>
         </button>

@@ -11,7 +11,7 @@ function AllergiesButtons({ onAllergySelect }) {
     <div className="button-container">
       <div className="buttoncontent">
         <button className="allergieButton" onClick={() => handleClick('Lactose')}>
-          <img src={'/images/lactose.png'} alt="Lactose image" />
+          <img src={'/images/milk.png'} alt="Lactose image" />
           <span className="button-text">Lactose</span>
         </button>
       </div>
@@ -23,23 +23,25 @@ function AllergiesButtons({ onAllergySelect }) {
       </div>
       <div className="buttoncontent">
         <button className="allergieButton" onClick={() => handleClick('Nuts')}>
+        <img src={'/images/nuts.png'} alt="nuts image" />
           <span className="button-text">Nuts</span>
         </button>
       </div>
       <div className="buttoncontent">
         <button className="allergieButton" onClick={() => handleClick('Gluten')}>
-          <img src={'/images/gluten.png'} alt="Gluten image" />
+          <img src={'/images/glutens.png'} alt="Gluten image" />
           <span className="button-text">Gluten</span>
         </button>
       </div>
       <div className="buttoncontent">
         <button className="allergieButton" onClick={() => handleClick('SeaFood')}>
-        
+        <img src={'/images/shrimp.png'} alt="shrimp image" />
           <span className="button-text">SeaFood</span>
         </button>
       </div>
       <div className="buttoncontent">
         <button className="allergieButton" onClick={() => handleClick('Nothing')}>
+        <img src={'/images/null.png'} alt="null image" />
           <span className="button-text">Nothing</span>
         </button>
       </div>

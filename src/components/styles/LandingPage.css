@@ -1,16 +1,26 @@
 
 
-.heading{
+.heading {
     width: 20rem;
 }
-.container {
 
-    background-image: url('/images/backgroundMobile.png');
+.container {
+    background: url('/images/bg-desktop.png') center/cover no-repeat;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100vh;
- 
 }
 
+
+@media (min-width: 600px) {
+    .heading {
+        width: 30rem;
+    }
+}
+@media (min-width: 700px) {
+    .heading {
+        width: 40rem;
+    }
+}

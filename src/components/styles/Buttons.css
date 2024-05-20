@@ -64,11 +64,15 @@
 
 
 .dietButton img {
-  width: 1rem;
+  width: 4rem;
+}
+.allergieButton img{
+  width: 3.5rem;
 }
 
 .button-text {
   margin-top: auto;
+  font-size: 1rem;
 }
 
 .allergieButton{
@@ -102,7 +106,7 @@
 
   }
 
-  .dietButton.active {
+  .dietButton.active, .allergieButton.dietButton.active {
     background-color: #1abc9c51;
     border: 2px solid #1ABC9C;
     border-bottom: 4px solid #1ABC9C;
@@ -128,3 +132,35 @@
   margin-right: 10px; 
   font-size: 1rem;
 }
+
+
+@media (min-width: 800px) {
+ 
+.dietButton{
+  width: 12rem;
+  height: 14rem;
+}
+
+.dietButton img {
+  width: 7rem;
+}
+.button-text {
+
+  font-size: 1.5rem;
+}
+.allergieButton{
+  width: 10rem;
+  height: 12rem;
+}
+
+.allergieButton img {
+  width: 5rem;
+}
+.button-text {
+  font-size: 1.2rem;
+}
+.dietContainer p{
+  font-size: 2rem;
+}
+}
+
