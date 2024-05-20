@@ -5,13 +5,17 @@ function CreateRecipe() {
     return (
         <div className="recipe-container">
           <p>Create Recipe</p>
-          <p>Cooking method</p>
+          <br />
+          <p2>Cooking method</p2>
           <CreateRecipeButtons/>  
-        <p> Cooking time</p>
-        
-        <p>Servings</p>
-{/*         <div className="square"></div>
- */}        <button className="create-button">Create Recipe</button>
+        <p2> Cooking time</p2>
+        <br />
+        <br />
+        <p2>Servings</p2>
+        <br />
+
+<br />
+        <button className="create-button">Generate</button>
       </div>
   )
 }

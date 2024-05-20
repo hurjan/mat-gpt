@@ -10,6 +10,10 @@
 
 }
 
+p2 {
+  color: #6F6F6F
+}
+
 .square {
   width: 15rem;
   height: 15rem;
@@ -18,11 +22,10 @@
 }
 
 .create-button {
-  margin-top: 3rem;
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
+  padding: 1rem 7.5rem;
+  background-color: #1ABC9C;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.25rem;
 }
 
-.dietContainer p{
-  font-size: 2rem;
-}
