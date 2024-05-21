@@ -3,9 +3,14 @@
 .heading {
     width: 20rem;
 }
+.content{
+    background: url('/images/bg-desktop.png') center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 .container {
-    background: url('/images/bg-desktop.png') center/cover no-repeat;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -23,4 +28,14 @@
     .heading {
         width: 40rem;
     }
+    
 }
+
+@media (min-width: 700px) {
+  
+    .heading {
+        width: 40rem;
+    }
+
+}
+
