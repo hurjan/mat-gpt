@@ -10,7 +10,8 @@ import SavedRecipe from "./components/pages/SavedRecipe";
 import Groceries from "./components/pages/Groceries";
 import LoginPage from "./components/pages/LoginPage.jsx";
 import SignUp from "./components/pages/SignUp.jsx";
-
+import GeneratedRecipe from "./components/pages/GeneratedRecipe";
+import Recipe from './components/Recipe';
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
             <Route path="/allergies" element={<Allergies />} />
             <Route path="/ingredients" element={<Ingredients />} />
             <Route path="/CreateRecipe" element={<CreateRecipe />} />
+            <Route path="/GeneratedRecipe" element={<GeneratedRecipe />} />
             <Route path="/SavedRecipe" element={<SavedRecipe />} />
             <Route path="/groceries" element={<Groceries />} />
             <Route path="/login" element={<LoginPage />} />

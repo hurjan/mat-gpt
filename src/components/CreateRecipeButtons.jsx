@@ -23,7 +23,7 @@ function CreateRecipeButtons({ onCookingMethodSelect }) {
       <div className="buttoncontent">
         <button className="allergieButton" onClick={() => handleClick('Micro')}>
         <img src={'/images/micro.png'} alt="Micro image" />
-          <span className="button-text">micro</span>
+          <span className="button-text">microwave</span>
         </button>
       </div>
       <div className="buttoncontent">

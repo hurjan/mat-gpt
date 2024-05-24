@@ -15,7 +15,7 @@ function CreateRecipe() {
         <br />
 
 <br />
-        <button className="create-button">Generate</button>
+        <a href="/GeneratedRecipe"><button className="create-button">Generate</button></a>
       </div>
   )
 }
