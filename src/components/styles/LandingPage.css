@@ -4,18 +4,24 @@
     width: 20rem;
 }
 .content{
-    background: url('/images/bg-desktop.png') center/cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+        /* background: url('/images/bg-desktop.png') center/cover; */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      
 }
 
 .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
+
+      /* background: url('/images/bg-desktop.png') center/cover; */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      width: 100%;
 }
 
 
