@@ -60,6 +60,28 @@ function DietButtons() {
           <span className="button-text">Foodmap</span>
         </button>
       </div>
+      <div className="buttoncontent">
+        <button
+          className={`dietButton ${activeButtons.includes('Halal') ? 'active' : ''}`}
+          onClick={() => handleButtonClick('Halal')}
+        >
+          <div className="image-container">
+            <img src={'/images/halal.png'} alt="Halal image" />
+          </div>
+          <span className="button-text">Halal</span>
+        </button>
+      </div>
+      <div className="buttoncontent">
+        <button
+          className={`dietButton ${activeButtons.includes('Keto') ? 'active' : ''}`}
+          onClick={() => handleButtonClick('Keto')}
+        >
+          <div className="image-container">
+            <img src={'/images/keto.png'} alt="Keto image" />
+          </div>
+          <span className="button-text">Keto</span>
+        </button>
+      </div>
     </div>
   );
 }
