@@ -1,7 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Navbar from "./components/navbar.jsx";
-import Allergies from "./components/pages/Allergies";
 import Diet from "./components/pages/Diet";
 import Ingredients from "./components/pages/Ingredients";
 import LandingPage from "./components/pages/LandingPage";
@@ -26,7 +25,6 @@ function App() {
           <Routes>
             <Route path="/" element={<LandingPage />} />
             <Route path="/diet" element={<Diet />} />
-            <Route path="/allergies" element={<Allergies />} />
             <Route path="/ingredients" element={<Ingredients />} />
             <Route path="/CreateRecipe" element={<CreateRecipe />} />
             <Route path="/GeneratedRecipe" element={<GeneratedRecipe />} />
