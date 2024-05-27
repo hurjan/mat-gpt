@@ -99,6 +99,11 @@
   border-bottom: 4px solid #1ABC9C;
   border-radius: 10px;
 }
+.toggle-heading {
+  cursor: pointer;
+  font-weight: bold;
+}
+
 
 button, .landingButton1, .landingButton2, .dietButton, .allergieButton, .nextButton {
   letter-spacing: .5px;
@@ -116,7 +121,7 @@ button, .landingButton1, .landingButton2, .dietButton, .allergieButton, .nextBut
   margin-right: 10px;
   font-size: 1rem;
 }
-/* 
+
 @media (min-width: 800px) {
   .dietButton, .allergieButton {
     width: 12rem;
@@ -147,4 +152,4 @@ button, .landingButton1, .landingButton2, .dietButton, .allergieButton, .nextBut
   .dietContainer p {
     font-size: 2rem;
   }
-} */
+} 

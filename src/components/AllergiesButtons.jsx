@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import '../components/styles/Buttons.css';
 
-function AllergiesButtons({ onAllergySelect }) {
+function AllergiesButtons() {
   const [activeAllergies, setActiveAllergies] = useState([]);
 
   const handleClick = (allergy) => {
@@ -12,7 +12,6 @@ function AllergiesButtons({ onAllergySelect }) {
         return [...prevState, allergy];
       }
     });
-    onAllergySelect(allergy);
   };
 
   return (
@@ -40,7 +39,7 @@ function AllergiesButtons({ onAllergySelect }) {
           className={`allergieButton ${activeAllergies.includes('Nuts') ? 'active' : ''}`}
           onClick={() => handleClick('Nuts')}
         >
-          <img src={'/images/nuts.png'} alt="nuts image" />
+          <img src={'/images/nuts.png'} alt="Nuts image" />
           <span className="button-text">Nuts</span>
         </button>
       </div>
@@ -58,7 +57,7 @@ function AllergiesButtons({ onAllergySelect }) {
           className={`allergieButton ${activeAllergies.includes('SeaFood') ? 'active' : ''}`}
           onClick={() => handleClick('SeaFood')}
         >
-          <img src={'/images/shrimp.png'} alt="shrimp image" />
+          <img src={'/images/shrimp.png'} alt="SeaFood image" />
           <span className="button-text">SeaFood</span>
         </button>
       </div>
@@ -67,7 +66,7 @@ function AllergiesButtons({ onAllergySelect }) {
           className={`allergieButton ${activeAllergies.includes('Nothing') ? 'active' : ''}`}
           onClick={() => handleClick('Nothing')}
         >
-          <img src={'/images/null.png'} alt="null image" />
+          <img src={'/images/null.png'} alt="Nothing image" />
           <span className="button-text">Nothing</span>
         </button>
       </div>

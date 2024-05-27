@@ -1,18 +1,17 @@
-import "./styles/Buttons.css";
 import React, { useState } from 'react';
+import "./styles/Buttons.css";
 
-function DietButtons({ onButtonClick }) {
+function DietButtons() {
   const [activeButtons, setActiveButtons] = useState([]);
 
-  const handleButtonClick = (text) => {
+  const handleButtonClick = (diet) => {
     setActiveButtons(prevState => {
-      if (prevState.includes(text)) {
-        return prevState.filter(button => button !== text);
+      if (prevState.includes(diet)) {
+        return prevState.filter(item => item !== diet);
       } else {
-        return [...prevState, text];
+        return [...prevState, diet];
       }
     });
-    onButtonClick(text);
   };
 
   return (

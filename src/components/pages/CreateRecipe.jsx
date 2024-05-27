@@ -21,6 +21,7 @@ function CreateRecipe() {
 
   return (
     <div className="recipe-container">
+       
       <p>Create Recipe</p>
       <br />
       <p2 className="cooking-method" onClick={toggleCookingMethods}>
