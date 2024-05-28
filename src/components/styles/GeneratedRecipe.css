@@ -7,13 +7,8 @@
   font-family: 'Open Sans', sans-serif;
   display: flex;
   flex-direction: column;
-   align-items: center;
+  align-items: center;
   text-align: center;
- }
-
- 
-.generated-recipe p {
-  text-align: left; /* Aligns text to the left */
 }
 
 .generated-recipe h1 {
@@ -42,9 +37,10 @@
 }
 
 .generated-recipe p {
+  margin-left: 20em;
   font-size: 1.2em;
   font-weight: bold;
-  margin: 0px 0 20px; /* Add spacing above and below the paragraph */
+  margin: 0px -20em 20px; /* Add spacing above and below the paragraph */
 }
 
 .generated-recipe .content-box {
@@ -53,13 +49,12 @@
   padding: 15px;
   border-bottom-width: 3px; /* Make the bottom border thicker */
 
-  width: 90%;
+  width: 100%;
   box-sizing: border-box;
   text-align: left;
   margin-bottom: 20px; /* Add spacing below the content boxes */
   display: flex;
-  /* justify-content: center; */
-  
+  justify-content: left;
  }
 
 .generated-recipe ul,
@@ -67,10 +62,6 @@
   margin: 10px 0;
   padding-left: 20px;
   list-style-position: inside;
-}
-#ingredients-box ul {
-  list-style-type: disc; /* Enables bullet points */
-  padding-left: 2em; /* Provides some space for the bullets */
 }
 
 .generated-recipe li {
@@ -86,6 +77,11 @@
   padding-left: 20px; /* Add padding for content alignment if necessary */
 }
 
+#ingredients-box ul {
+  list-style-type: disc; /* Enables bullet points */
+  padding-left: 1em; /* Provides some space for the bullets */
+  align-items: left;
+}
 .generated-recipe p:last-child {
   margin-top: 20px;
   font-weight: normal;
