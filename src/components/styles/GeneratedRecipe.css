@@ -21,12 +21,13 @@
   height: 20em; /* Fixed height */
   overflow: hidden;
   position: relative;
-  margin-bottom: -1em; /* Add spacing below the image */
+  margin-bottom: 1.5em; /* Add spacing below the image */
+  margin-top: 1em;
 }
 
 .generated-recipe .image-container img {
   position: absolute;
-  top: 25%;
+  top: 50%;
   left: 50%;
   height: auto;
   width: auto;
@@ -52,8 +53,8 @@
   text-align: left;
   margin-bottom: 20px; /* Add spacing below the content boxes */
   display: flex;
-  justify-content: center;
-}
+/*   justify-content: center;
+ */}
 
 .generated-recipe ul,
 .generated-recipe ol {
@@ -64,6 +65,15 @@
 
 .generated-recipe li {
   margin-bottom: 5px;
+}
+.generated-recipe ul, .generated-recipe ol {
+  list-style-type: none; /* Removes default list markers */
+  padding: 0; /* Removes padding */
+  margin: 0; /* Removes margins */
+}
+
+.content-box {
+  padding-left: 20px; /* Add padding for content alignment if necessary */
 }
 
 .generated-recipe p:last-child {
@@ -78,6 +88,6 @@
   height: 20em; /* Fixed height */
   overflow: hidden;
   position: relative;
-  margin-bottom: 2em; /* Add spacing below the image */
+  margin-bottom: 1.5em; /* Add spacing below the image */
 }
 }

@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import Header from "./components/Header";
 import Navbar from "./components/navbar.jsx";
 import Allergies from "./components/pages/Allergies";
@@ -14,11 +14,14 @@ import GeneratedRecipe from "./components/pages/GeneratedRecipe";
 import Recipe from "./components/Recipe.jsx";
 
 function App() {
+  const location = useLocation(); // Get the current location
+  const isLandingPage = location.pathname === '/'; // Check if it's the landing page
+
   return (
       <div className="App">
         <Header />
         <Navbar />
-        <div className="content">
+        <div className={`content ${isLandingPage ? "landing-background" : ""}`}>
           <Routes>
             <Route path="/" element={<LandingPage />} />
             <Route path="/diet" element={<Diet />} />

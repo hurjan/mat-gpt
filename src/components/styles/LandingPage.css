@@ -3,8 +3,16 @@
 .heading {
     width: 20rem;
 }
-.content{
+
+.landing-background {
     background: url('/images/bg-desktop.png') center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+
+.content{
     display: flex;
     align-items: center;
     justify-content: center;
