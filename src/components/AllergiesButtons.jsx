@@ -1,73 +1,80 @@
-import React, { useState } from 'react';
-import '../components/styles/Buttons.css';
+import { useUserPreferences } from './contexts/UserPreferencesContext'; 
+import "./styles/Buttons.css";
 
 function AllergiesButtons() {
-  const [activeAllergies, setActiveAllergies] = useState([]);
+  const { allergies, addOrRemove } = useUserPreferences();
 
-  const handleClick = (allergy) => {
-    setActiveAllergies(prevState => {
-      if (prevState.includes(allergy)) {
-        return prevState.filter(item => item !== allergy);
-      } else {
-        return [...prevState, allergy];
-      }
-    });
+  const handleButtonClick = (item) => {
+    addOrRemove(allergies, item);
   };
+
 
   return (
     <div className="button-container">
       <div className="buttoncontent">
         <button
-          className={`allergieButton ${activeAllergies.includes('Lactose') ? 'active' : ''}`}
-          onClick={() => handleClick('Lactose')}
+          className={`allergieButton ${allergies.includes('Gluten') ? 'active' : ''}`}
+          onClick={() => handleButtonClick('Gluten')}
         >
-          <img src={'/images/milk.png'} alt="Lactose image" />
-          <span className="button-text">Lactose</span>
-        </button>
-      </div>
-      <div className="buttoncontent">
-        <button
-          className={`allergieButton ${activeAllergies.includes('Egg') ? 'active' : ''}`}
-          onClick={() => handleClick('Egg')}
-        >
-          <img src={'/images/egg.png'} alt="Egg image" />
-          <span className="button-text">Egg</span>
-        </button>
-      </div>
-      <div className="buttoncontent">
-        <button
-          className={`allergieButton ${activeAllergies.includes('Nuts') ? 'active' : ''}`}
-          onClick={() => handleClick('Nuts')}
-        >
-          <img src={'/images/nuts.png'} alt="Nuts image" />
-          <span className="button-text">Nuts</span>
-        </button>
-      </div>
-      <div className="buttoncontent">
-        <button
-          className={`allergieButton ${activeAllergies.includes('Gluten') ? 'active' : ''}`}
-          onClick={() => handleClick('Gluten')}
-        >
-          <img src={'/images/glutens.png'} alt="Gluten image" />
+          <div className="image-container">
+            <img src={'/images/glutens.png'} alt="Gluten image" />
+          </div>
           <span className="button-text">Gluten</span>
         </button>
       </div>
       <div className="buttoncontent">
         <button
-          className={`allergieButton ${activeAllergies.includes('SeaFood') ? 'active' : ''}`}
-          onClick={() => handleClick('SeaFood')}
+          className={`allergieButton ${allergies.includes('Nuts') ? 'active' : ''}`}
+          onClick={() => handleButtonClick('Nuts')}
         >
-          <img src={'/images/shrimp.png'} alt="SeaFood image" />
-          <span className="button-text">SeaFood</span>
+          <div className="image-container">
+            <img src={'/images/nuts.png'} alt="Nuts image" />
+          </div>
+          <span className="button-text">Nuts</span>
         </button>
       </div>
       <div className="buttoncontent">
         <button
-          className={`allergieButton ${activeAllergies.includes('Nothing') ? 'active' : ''}`}
-          onClick={() => handleClick('Nothing')}
+          className={`allergieButton ${allergies.includes('Dairy') ? 'active' : ''}`}
+          onClick={() => handleButtonClick('Dairy')}
         >
-          <img src={'/images/null.png'} alt="Nothing image" />
-          <span className="button-text">Nothing</span>
+          <div className="image-container">
+            <img src={'/images/milk.png'} alt="Dairy image" />
+          </div>
+          <span className="button-text">Dairy</span>
+        </button>
+      </div>
+      <div className="buttoncontent">
+        <button
+          className={`allergieButton ${allergies.includes('Eggs') ? 'active' : ''}`}
+          onClick={() => handleButtonClick('Eggs')}
+        >
+          <div className="image-container">
+            <img src={'/images/egg.png'} alt="Egg image" />
+          </div>
+          <span className="button-text">Eggs</span>
+        </button>
+      </div>
+      <div className="buttoncontent">
+        <button
+          className={`allergieButton ${allergies.includes('Seafood') ? 'active' : ''}`}
+          onClick={() => handleButtonClick('Seafood')}
+        >
+          <div className="image-container">
+            <img src={'/images/shrimp.png'} alt="Seafood image" />
+          </div>
+          <span className="button-text">Seafood</span>
+        </button>
+      </div>
+      <div className="buttoncontent">
+        <button
+          className={`allergieButton ${allergies.includes('Soy') ? 'active' : ''}`}
+          onClick={() => handleButtonClick('Soy')}
+        >
+          <div className="image-container">
+            <img src={'/images/soy.png'} alt="Soy image" />
+          </div>
+          <span className="button-text">Soy</span>
         </button>
       </div>
     </div>
