@@ -11,17 +11,13 @@ import Groceries from "./components/pages/Groceries";
 import LoginPage from "./components/pages/LoginPage.jsx";
 import SignUp from "./components/pages/SignUp.jsx";
 import GeneratedRecipe from "./components/pages/GeneratedRecipe";
-import Recipe from './components/Recipe';
+import Recipe from "./components/Recipe.jsx";
 
 function App() {
   return (
-    <Router>
       <div className="App">
-        {/* Header and Navbar always rendered */}
         <Header />
         <Navbar />
-
-        {/* Routes for different pages */}
         <div className="content">
           <Routes>
             <Route path="/" element={<LandingPage />} />
@@ -37,7 +33,6 @@ function App() {
           </Routes>
         </div>
       </div>
-    </Router>
   );
 }
 
