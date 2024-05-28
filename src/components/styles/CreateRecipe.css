@@ -1,18 +1,40 @@
 .recipe-container {
-  position: relative;  /* Use relative positioning */
+  position: relative;
   text-align: center;
   font-size: 2rem;
   font-family: 'Open Sans', sans-serif;
-  margin-top: 2rem;  /* Add some margin for top spacing */
+  margin-top: 2rem;
+}
+
+
+.ingredients-input .query-input {
+  height: 3em;
+  border-radius: 8px;
+  padding: 0 10px;
+  color: #333;
+  border: 1px solid #ccc;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.ingredients-input input.query-input {
+  font-size: 0.5em;
+}
+
+.ingredients-input .query-input::placeholder {
+  color: #ccc;
+}
+
+p2, .create-button {
+  cursor: pointer;
+  transition: color 0.3s ease, background-color 0.3s ease;
+  user-select: none;
 }
 
 p2 {
   color: #6F6F6F;
-  cursor: pointer;
-  user-select: none;
-  transition: color 0.3s ease;
   display: block;
-  margin: 20px 0;  /* Standardize margin for equal spacing */
+  margin: 20px 0;
 }
 
 p2:hover {
@@ -20,18 +42,11 @@ p2:hover {
 }
 
 p2.cooking-method {
-  margin-bottom: 1em;  /* Adjust spacing for visual balance */
+  margin-bottom: 1em;
 }
 
 p2.cooking-time {
-  margin-top: 1em;  /* Adjust spacing for visual balance */
-}
-
-.square {
-  width: 15rem;
-  height: 15rem;
-  border: 2px solid black;
-  margin: 0 auto;
+  margin-top: 3em;
 }
 
 .create-button {
@@ -42,7 +57,6 @@ p2.cooking-time {
   font-size: 1.25rem;
   color: white;
   margin-top: 20px;
-  transition: background-color 0.3s ease;
 }
 
 .create-button:hover {
@@ -51,19 +65,14 @@ p2.cooking-time {
 
 .create-recipe-buttons-wrapper {
   max-height: 0;
+  opacity: 0;
   overflow: hidden;
   transition: max-height 0.5s ease, opacity 0.5s ease;
 }
 
 .create-recipe-buttons-wrapper.show {
-  max-height: 500px;  /* Adjust based on content height */
+  max-height: 500px;
   opacity: 1;
-}
-
-.create-recipe-buttons-wrapper:not(.show) {
-  opacity: 0;
-  max-height: 0;
-  overflow: hidden;
 }
 
 .create-recipe-buttons {
@@ -76,7 +85,7 @@ p2.cooking-time {
 }
 
 .create-recipe-buttons button {
-  flex: none;  /* Ensure buttons don't stretch */
+  flex: none;
   width: 5rem;
   height: 5rem;
   display: flex;
@@ -85,7 +94,6 @@ p2.cooking-time {
   justify-content: center;
   border: none;
   background: transparent;
-  cursor: pointer;
 }
 
 .create-recipe-buttons img {
@@ -104,32 +112,114 @@ p2.cooking-time {
   margin: 0 auto;
   font-size: 1.25rem;
   padding: 0.5rem;
-  padding-right: 2rem; /* Add padding to the right for the arrow */
+  padding-right: 2rem;
   border: 1px solid #1ABC9C;
   border-radius: 5px;
   background-color: #fff;
-  appearance: none; /* Remove default styling */
-  text-align: left; /* Align text to the left */
-  position: relative; /* Ensure positioning context for the arrow */
+  appearance: none;
+  text-align: left;
+  position: relative;
 }
 
 .cooking-time-dropdown::after, .servings-dropdown::after {
-  content: '▼'; /* Downward arrow */
+  content: '▼';
   font-size: 1rem;
   color: #1ABC9C;
   position: absolute;
   right: 10px;
   top: 50%;
   transform: translateY(-50%);
-  pointer-events: none; /* Allow clicking through the arrow */
+  pointer-events: none;
 }
 
-@media (min-width: 800px) {
-  .create-recipe-buttons {
-    flex-wrap: nowrap;
-  }
+/* Styling for labels */
+.label {
+  font-size: 1.5rem; /* Smaller font size */
+  color: #999; /* Lighter gray color */
+}
 
-  .create-recipe-buttons button {
-    flex: none;
-  }
+/* Add the label class to the specific CSS rules where needed */
+.recipe-container p,
+.ingredients-input label,
+.cooking-method,
+.cooking-time {
+  font-size: 1.5rem; /* Ensures consistency in font size */
+  color: #3b3b3b; /* Lighter color for less emphasis */
+}
+
+/* Ensure textarea and dropdowns do not use the label styles */
+.ingredients-input .query-input,
+.cooking-time-dropdown,
+.servings-dropdown {
+  font-size: 1.25rem; /* Default size for interactive elements */
+  color: #333; /* Darker color for better readability */
+}
+/* General styling for sections to remove <br> and manage spacing */
+.recipe-container > div,
+.recipe-container > p,
+.recipe-container > select,
+.recipe-container > button {
+  margin-bottom: 20px; /* Uniform margin for all child elements */
+}
+
+/* Specific label styling for smaller font and lighter color */
+.label {
+  font-size: 1.5rem; /* Smaller font size */
+  color: #222222; /* Lighter gray color */
+}
+
+/* Styling for text inputs and textareas to differentiate from labels */
+.ingredients-input .query-input,
+.cooking-time-dropdown,
+.servings-dropdown {
+  font-size: 1.25rem; /* Suitable size for interaction */
+  color: #333; /* Standard text color for better readability */
+}
+
+/* Adjustments for button wrappers to control visibility transitions */
+.create-recipe-buttons-wrapper {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease, opacity 0.5s ease;
+}
+
+.create-recipe-buttons-wrapper.show {
+  max-height: 500px; /* Adjust based on content height */
+  opacity: 1;
+}
+
+/* Flex display adjustments for better alignment and spacing of buttons */
+.create-recipe-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+}
+
+/* Enhancing the title's appearance */
+.recipe-container > p.label.create-recipe-title {
+  padding-bottom: 0.5em;
+  font-size: 2rem; /* Larger font size for prominence */
+  color: black; /* Set color to black for the title only */
+}
+
+
+.ingredients-input textarea.query-input {
+  margin-top: 1em;
+  font-size: 0.5em;
+  resize: none; /* Disables the ability to resize the textarea */
+  height: 8em; /* Doubling the height from standard settings */
+  padding: 10px;
+
+}
+
+
+/* Maintaining consistent style adjustments for other elements */
+.ingredients-input input.query-input,
+.cooking-time-dropdown,
+.servings-dropdown {
+  font-size: 1.25rem; /* Suitable size for interactive elements */
+  color: #5e5e5e; /* Standard text color for readability */
 }
