@@ -1,11 +1,30 @@
-
-
 .recipe-container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  position: relative;  /* Use relative positioning */
   text-align: center;
+  font-size: 2rem;
+  font-family: 'Open Sans', sans-serif;
+  margin-top: 2rem;  /* Add some margin for top spacing */
+}
+
+p2 {
+  color: #6F6F6F;
+  cursor: pointer;
+  user-select: none;
+  transition: color 0.3s ease;
+  display: block;
+  margin: 20px 0;  /* Standardize margin for equal spacing */
+}
+
+p2:hover {
+  color: #1ABC9C;
+}
+
+p2.cooking-method {
+  margin-bottom: 1em;  /* Adjust spacing for visual balance */
+}
+
+p2.cooking-time {
+  margin-top: 1em;  /* Adjust spacing for visual balance */
 }
 
 .square {
@@ -16,7 +35,101 @@
 }
 
 .create-button {
-  margin-top: 3rem;
-  padding: 0.5rem 1rem;
+  padding: 1rem 7.5rem;
+  background-color: #1ABC9C;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.25rem;
+  color: white;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.create-button:hover {
+  background-color: #16a085;
+}
+
+.create-recipe-buttons-wrapper {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease, opacity 0.5s ease;
+}
+
+.create-recipe-buttons-wrapper.show {
+  max-height: 500px;  /* Adjust based on content height */
+  opacity: 1;
+}
+
+.create-recipe-buttons-wrapper:not(.show) {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+}
+
+.create-recipe-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  flex-wrap: nowrap;
+}
+
+.create-recipe-buttons button {
+  flex: none;  /* Ensure buttons don't stretch */
+  width: 5rem;
+  height: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.create-recipe-buttons img {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.create-recipe-buttons .button-text {
+  font-size: 0.75rem;
+  margin-top: 0.25rem;
+}
+
+.cooking-time-dropdown, .servings-dropdown {
+  min-width: 15em;
+  display: block;
+  margin: 0 auto;
+  font-size: 1.25rem;
+  padding: 0.5rem;
+  padding-right: 2rem; /* Add padding to the right for the arrow */
+  border: 1px solid #1ABC9C;
+  border-radius: 5px;
+  background-color: #fff;
+  appearance: none; /* Remove default styling */
+  text-align: left; /* Align text to the left */
+  position: relative; /* Ensure positioning context for the arrow */
+}
+
+.cooking-time-dropdown::after, .servings-dropdown::after {
+  content: '▼'; /* Downward arrow */
   font-size: 1rem;
+  color: #1ABC9C;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none; /* Allow clicking through the arrow */
+}
+
+@media (min-width: 800px) {
+  .create-recipe-buttons {
+    flex-wrap: nowrap;
+  }
+
+  .create-recipe-buttons button {
+    flex: none;
+  }
 }

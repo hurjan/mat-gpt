@@ -1,41 +1,43 @@
-
 .landingButton-group {
-    display: flex;
-    flex-direction: column;
-    margin-top: 20px; 
-    margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  margin-top: 3rem;
 }
 
 .landingButton1, .landingButton2 {
-    margin: 10px;
-    padding: 1rem 2rem;
-    font-size: 1.25rem;
-   
-}
-.landingButton1{
-    background-color: #1ABC9C;
-    border: none;
-    border-radius: 5px;
+  margin: 10px;
+  padding: 1rem 2rem;
+  font-size: 1.25rem;
 }
 
-.landingButton2{
-    border: 1px solid #1ABC9C;
-    border-radius: 5px;
-    background-color: transparent;
-    text-decoration: none;
-    color: black;
+.landingButton1 {
+  background-color: #1ABC9C;
+  border: none;
+  border-radius: 5px;
 }
 
-.ArrowButton{
+.landingButton2 {
+  border: 1px solid #1ABC9C;
+  border-radius: 5px;
+  background-color: transparent;
+  text-decoration: none;
+  color: black;
+}
+
+.ArrowButton {
+  position: absolute;
+  top: 0;
+  left: 0;
   background-color: #1ABC9C;
   padding: .8rem 1.2rem;
-  margin-top: 1.5rem;
-  margin-left: 1.5rem;
   border-radius: 5px;
   border: none;
- font-size: 1.25rem;
-}
+  font-size: 1.25rem;
+  margin: 2rem;
 
+
+}
 .button-container {
   display: flex;
   flex-wrap: wrap;
@@ -45,7 +47,7 @@
   margin-bottom: 4rem;
 }
 
-.dietButton{
+.dietButton, .allergieButton {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -59,63 +61,51 @@
   border: 2px solid #E5E5E5;
   border-bottom: 5px solid #E5E5E5;
   border-radius: 10px;
-  
+  transition: background-color 0.3s, border-color 0.3s;
 }
 
-
-.dietButton img {
-  width: 1rem;
+.dietButton img, .allergieButton img {
+  width: 4rem;
 }
+
 
 .button-text {
   margin-top: auto;
+  font-size: 1rem;
 }
 
-.allergieButton{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 6rem;
-  height: 8rem;
-  padding: 1rem;
-  border: 2px solid #E5E5E5;
-  border-bottom: 5px solid #E5E5E5;
+.nextButton {
+  margin-bottom: 2rem;
+  padding: 1rem 7.5rem;
+  background-color: #1ABC9C;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.25rem;
+}
+
+.dietButton:hover, .allergieButton:hover {
+  background-color: #1abc9c51;
+  border: 2px solid #1ABC9C;
+  border-bottom: 5px solid #1ABC9C;
   border-radius: 10px;
-  text-align: center;
-  
-}
-  
-  .nextButton{
-    padding: 1rem 7.5rem;
-    background-color: #1ABC9C;
-    border: none;
-    border-radius: 5px;
-    font-size: 1.25rem;
-  }
-
-  .dietButton:hover,.allergieButton:hover{
-    background-color: #1abc9c51;
-    border: 2px solid #1ABC9C;
-    border-bottom: 5px solid #1ABC9C;
-    border-radius: 10px;
-
-  }
-
-  .dietButton.active {
-    background-color: #1abc9c51;
-    border: 2px solid #1ABC9C;
-    border-bottom: 4px solid #1ABC9C;
-    border-radius: 10px;
-  }
-  
-
-  button, .landingButton1, .landingButton2, .dietButton, .nextButton {
-    letter-spacing: .5px;
-    font-weight: bold;
-   
 }
 
+.dietButton.active, .allergieButton.active {
+  background-color: #1abc9c51;
+  border: 2px solid #1ABC9C;
+  border-bottom: 4px solid #1ABC9C;
+  border-radius: 10px;
+}
+.toggle-heading {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+
+button, .landingButton1, .landingButton2, .dietButton, .allergieButton, .nextButton {
+  letter-spacing: .5px;
+  font-weight: bold;
+}
 
 .selectedContainer {
   display: flex;
@@ -124,7 +114,39 @@
 .selectedDiet {
   background-color: #1ABC9C;
   border-radius: 5px;
-  padding: .5rem; 
-  margin-right: 10px; 
+  padding: .5rem;
+  margin-right: 10px;
   font-size: 1rem;
 }
+
+@media (min-width: 800px) {
+  .dietButton, .allergieButton {
+    width: 12rem;
+    height: 14rem;
+  }
+
+  .dietButton img, .allergieButton img {
+    width: 7rem;
+  }
+
+  .button-text {
+    font-size: 1.5rem;
+  }
+
+  .allergieButton {
+    width: 10rem;
+    height: 12rem;
+  }
+
+  .allergieButton img {
+    width: 5rem;
+  }
+
+  .button-text {
+    font-size: 1.2rem;
+  }
+
+  .dietContainer p {
+    font-size: 2rem;
+  }
+} 

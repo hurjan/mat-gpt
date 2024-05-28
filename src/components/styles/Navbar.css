@@ -117,7 +117,7 @@
 }
 
 .borgir {
-  margin-top: -5em;
+  margin-top: -1.75em;
   /* margin-left: 1.5em; */
   height: 1.5em;
   
@@ -130,7 +130,7 @@
 
 .navBarExit {
   position: absolute;
-  top: 6px;
+  top: 1.75em;
   right: 40px;
   cursor: pointer;
   z-index: 10;
