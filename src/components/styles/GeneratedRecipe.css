@@ -7,8 +7,13 @@
   font-family: 'Open Sans', sans-serif;
   display: flex;
   flex-direction: column;
-  align-items: center;
+   align-items: center;
   text-align: center;
+ }
+
+ 
+.generated-recipe p {
+  text-align: left; /* Aligns text to the left */
 }
 
 .generated-recipe h1 {
@@ -17,7 +22,7 @@
 }
 
 .generated-recipe .image-container {
-  width: 100%; /* Or set a fixed width, e.g., 600px */
+  width: 110%; /* Or set a fixed width, e.g., 600px */
   height: 20em; /* Fixed height */
   overflow: hidden;
   position: relative;
@@ -48,19 +53,24 @@
   padding: 15px;
   border-bottom-width: 3px; /* Make the bottom border thicker */
 
-  width: 100%;
+  width: 90%;
   box-sizing: border-box;
   text-align: left;
   margin-bottom: 20px; /* Add spacing below the content boxes */
   display: flex;
-/*   justify-content: center;
- */}
+  /* justify-content: center; */
+  
+ }
 
 .generated-recipe ul,
 .generated-recipe ol {
   margin: 10px 0;
   padding-left: 20px;
   list-style-position: inside;
+}
+#ingredients-box ul {
+  list-style-type: disc; /* Enables bullet points */
+  padding-left: 2em; /* Provides some space for the bullets */
 }
 
 .generated-recipe li {

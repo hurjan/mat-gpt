@@ -71,11 +71,13 @@ function Recipe() {
           </div>
           <p>Ingredients</p>
           <div className="content-box">
-            <ul>
-              {recipe.ingredients.split(', ').map((ingredient, index) => (
-                <li key={index}>{ingredient}</li>
-              ))}
-            </ul>
+            <div id="ingredients-box">
+                <ul>
+                  {recipe.ingredients.split(', ').map((ingredient, index) => (
+                    <li key={index}>{ingredient}</li>
+                  ))}
+                </ul>
+              </div>
           </div>
           <p>Instructions</p>
           <div className="content-box">
