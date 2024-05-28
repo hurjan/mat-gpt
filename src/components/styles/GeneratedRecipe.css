@@ -87,6 +87,25 @@
   font-weight: normal;
 }
 
+.loading-container {
+  margin-top: -2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 70vh; /* Full viewport height to center vertically */
+  text-align: center; /* Centers the text horizontally */
+  gap: 5em; /* Adds more space between the text and the GIF */
+  background: url('../../images/group33.png') no-repeat center center fixed; 
+
+}
+
+/* Make the GIF slightly larger */
+.loading-container img {
+  width: 100%; /* Increase width */
+  max-width: 300px; /* Set a maximum width */
+}
+
 @media screen and (min-width: 768px) {
   
 .generated-recipe .image-container {
@@ -97,3 +116,21 @@
   margin-bottom: 1.5em; /* Add spacing below the image */
 }
 }
+
+.recipe-button {
+  padding: 1rem; /* Standardized padding */
+  width: 90%; /* Set a specific width for both buttons */
+  text-align: center; /* Center button text */
+  margin: 10px; /* Space around the buttons */
+  background-color: #1ABC9C;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.recipe-button:hover {
+  background-color: #16a085; /* Slightly darker shade on hover */
+}
+

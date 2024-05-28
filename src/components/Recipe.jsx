@@ -9,8 +9,19 @@ function Recipe() {
   const [recipe, setRecipe] = useState(null);
   const [imageUrl, setImageUrl] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
+  const [loadingImage, setLoadingImage] = useState('');
   const [error, setError] = useState(null);
   const navigate = useNavigate();
+
+  // Define GIFs array
+  const gifs = ['snurr1.gif', 'snurr2.gif', 'snurr3.gif'];
+
+  // Function to select a random GIF
+
+  const selectRandomGif = () => {
+    const randomIndex = Math.floor(Math.random() * gifs.length);
+    return `../../images/${gifs[randomIndex]}`;
+  };
 
   const fetchRecipe = async () => {
     if (!query || !userId || !cookingTime || !servings) {
@@ -21,6 +32,7 @@ function Recipe() {
 
     setIsLoading(true);
     setError(null);
+    setLoadingImage(selectRandomGif()); // Set random GIF each time fetching starts
     const queryString = `query=${encodeURIComponent(query)}&userId=${encodeURIComponent(userId)}&cookingTime=${encodeURIComponent(cookingTime)}&servings=${encodeURIComponent(servings)}`;
     const url = `https://localhost:7251/Recipe/GenerateRecipe?${queryString}`;
 
@@ -60,7 +72,25 @@ function Recipe() {
 
   return (
     <div className="generated-recipe">
-      {isLoading && <div>Loading...</div>}
+      {isLoading && (
+        <div className="loading-container">
+          <p>Generating, please wait...</p>
+          <img src="../../images/Group33.png" alt="Decorative" style={{
+  opacity: '0.5',
+  position: 'absolute',
+  zIndex: '-1',
+  top: '20%',
+  left: '50%',
+  marginTop: '-5em',
+  transform: 'translateX(-50%)', // Center the image horizontally
+  minWidth: '115vw', // 50% of the viewport width
+  height: 'auto', // Auto height to maintain aspect ratio
+  objectFit: 'cover',
+  filter: 'blur(5px)' // Retaining the blur effect
+}} />
+<img src={loadingImage} alt="Loading..." />
+        </div>
+      )}
       {error && <div>Error: {error}</div>}
       {!recipe && !isLoading && !error && <div>No recipe found.</div>}
       {recipe && (
@@ -88,8 +118,8 @@ function Recipe() {
           <p>Cooking Time: {recipe.cookingTime} minutes</p>
         </>
       )}
-      <button className="create-button" onClick={handleRegenerate}>Regenerate</button>
-      <button className="create-button" onClick={handleGoBack}>Go Back</button>
+      <button className="recipe-button" onClick={handleRegenerate}>Regenerate</button>
+      <button className="recipe-button" onClick={handleGoBack}>Go Back</button>
     </div>
   );
 }
