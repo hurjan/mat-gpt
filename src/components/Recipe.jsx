@@ -14,7 +14,7 @@ function Recipe() {
   const navigate = useNavigate();
 
   // Define GIFs array
-  const gifs = ['snurr1.gif', 'snurr2.gif', 'snurr3.gif'];
+  const gifs = ['snurr1.gif', 'snurr2.gif', 'snurr3.gif', 'snurr4.gif',  'snurr5.gif', 'snurr6.gif', 'snurr7.gif', 'snurr9.gif'];
 
   // Function to select a random GIF
 
@@ -38,12 +38,15 @@ function Recipe() {
 
     try {
       const response = await fetch(url);
+    
       if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`);
       }
-      const data = await response.json();
-      setRecipe(data.recipe);
-      setImageUrl(data.imageUrl);
+        const data = response.json();
+
+        setRecipe(data.recipe);
+        setImageUrl(data.imageUrl);
+        setIsLoading(false); // Stop showing the loading indicator after 1 minute
     } catch (error) {
       console.error('Error fetching recipe:', error);
       setError(`Failed to fetch recipe: ${error.message}`);
