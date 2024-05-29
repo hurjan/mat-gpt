@@ -1,4 +1,4 @@
-import { useUserPreferences } from './contexts/UserPreferencesContext'; // Ensure this path is correct
+import { useUserPreferences } from './contexts/UserPreferencesContext'; 
 import "./styles/Buttons.css";
 
 function AllergiesButtons() {
