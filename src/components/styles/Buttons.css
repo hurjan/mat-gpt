@@ -39,8 +39,11 @@
 
 }
 
-.recipe-container .ArrowButton {
-  margin-left: -.8rem;
+.recipe-wrapper .ArrowButton {
+  position: unset;
+  align-self:first baseline;
+
+
 }
 .button-container {
   display: flex;

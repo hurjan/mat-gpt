@@ -72,9 +72,9 @@ function AllergiesButtons() {
           onClick={() => handleButtonClick('Soy')}
         >
           <div className="image-container">
-            <img src={'/images/soy.png'} alt="Soy image" />
+            <img src={'/images/null.png'} alt="None image" />
           </div>
-          <span className="button-text">Soy</span>
+          <span className="button-text">None</span>
         </button>
       </div>
     </div>
