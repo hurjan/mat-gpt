@@ -16,3 +16,5 @@ Backend instruktioner för oss själva:
 11. Generera recept och var glad!!!!! Stäng ej ner swagger-rutan för då stängs den av.
 
     OBS!!!! SQL-portarna kan vara annorlunda och eventuellt blockade på mac pga CORS, isf borde man få 405 bad response och det betyder att man måste allowa den porten i project.cs, kan visa vart om det är ett problem.
+
+OBS-2!!!! Den är live och genererar bilder och grejor så spara på tokensen så inte chas går i konkurs  
