@@ -6,11 +6,13 @@ import { DevTool } from "@hookform/devtools"
 function SignUp()
 {
     const form= useForm();
-    const {register,control,handleSubmit,formState} = form;
+    const {register,control,handleSubmit,formState,watch} = form;
     const {errors}= formState;
     const onSubmit = (data) => {
         console.log('Form submitted',data)
     }
+    const WatchPassword = watch("password")
+
     return(
         <div className="containerLogin flex justify-center p-10">
             <form onSubmit={handleSubmit(onSubmit)} noValidate className=" w-full max-w-lg ">
@@ -65,7 +67,11 @@ function SignUp()
                             Confirm Password*
                         </label>
                         <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" 
-                        id="password2" name="password2" type="password" placeholder="Confirm Password" {...register("password2",{required:'Password confirmation is needed'})}/>
+                        id="password2" name="password2" type="password" placeholder="Confirm Password" 
+                        {...register("password2",{required:'Password confirmation is needed',validate:(fieldValue)=>{
+                            return (fieldValue == WatchPassword || "Passwords must be same")
+                        }       
+                        })}/>
                         <p className="error">{errors.password2?.message}</p>
                     </div>
                 </div>
