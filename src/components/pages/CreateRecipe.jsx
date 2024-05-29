@@ -47,8 +47,9 @@ function CreateRecipe() {
   };
 
   return (
+    <>
+      <a href="/diet"><button className="ArrowButton">&lt;</button></a>
     <div className="recipe-container">
-
       <p className="label create-recipe-title">Create Recipe</p>
       
       <div className='ingredients-input'>
@@ -98,6 +99,7 @@ function CreateRecipe() {
 
       <button className="create-button" onClick={handleGenerate}>Generate</button>
     </div>
+    </>
   );
 }
 
