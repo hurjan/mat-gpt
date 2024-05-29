@@ -1,6 +1,8 @@
+
+import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
+
 // eslint-disable-next-line no-unused-vars
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
 import Header from "./components/Header";
 import Navbar from "./components/navbar.jsx";
 import Diet from "./components/pages/Diet";
@@ -12,17 +14,26 @@ import Groceries from "./components/pages/Groceries";
 import LoginPage from "./components/pages/LoginPage.jsx";
 import SignUp from "./components/pages/SignUp.jsx";
 import GeneratedRecipe from "./components/pages/GeneratedRecipe";
+
+import Recipe from "./components/Recipe.jsx";
+
 // import Recipe from './components/Recipe';
 import { UserPreferencesProvider } from './components/context/UserPreferencesContext.jsx'; 
 
+
 function App() {
+  const location = useLocation(); // Get the current location
+  const isLandingPage = location.pathname === '/'; // Check if it's the landing page
+
   return (
+
     <UserPreferencesProvider>
       <Router>
         <div className="App">
           {/* Header and Navbar always rendered */}
           <Header />
           <Navbar />
+        <div className={`content ${isLandingPage ? "landing-background" : ""}`}>
 
           {/* Routes for different pages */}
           <div className="content">
@@ -41,6 +52,7 @@ function App() {
         </div>
       </Router>
     </UserPreferencesProvider>
+
   );
 }
 

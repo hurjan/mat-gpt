@@ -17,16 +17,17 @@
 }
 
 .generated-recipe .image-container {
-  width: 100%; /* Or set a fixed width, e.g., 600px */
+  width: 110%; /* Or set a fixed width, e.g., 600px */
   height: 20em; /* Fixed height */
   overflow: hidden;
   position: relative;
-  margin-bottom: -1em; /* Add spacing below the image */
+  margin-bottom: 1.5em; /* Add spacing below the image */
+  margin-top: 1em;
 }
 
 .generated-recipe .image-container img {
   position: absolute;
-  top: 25%;
+  top: 50%;
   left: 50%;
   height: auto;
   width: auto;
@@ -36,9 +37,10 @@
 }
 
 .generated-recipe p {
+  margin-left: 20em;
   font-size: 1.2em;
   font-weight: bold;
-  margin: 0px 0 20px; /* Add spacing above and below the paragraph */
+  margin: 0px -20em 20px; /* Add spacing above and below the paragraph */
 }
 
 .generated-recipe .content-box {
@@ -52,8 +54,8 @@
   text-align: left;
   margin-bottom: 20px; /* Add spacing below the content boxes */
   display: flex;
-  justify-content: center;
-}
+  justify-content: left;
+ }
 
 .generated-recipe ul,
 .generated-recipe ol {
@@ -65,10 +67,43 @@
 .generated-recipe li {
   margin-bottom: 5px;
 }
+.generated-recipe ul, .generated-recipe ol {
+  list-style-type: none; /* Removes default list markers */
+  padding: 0; /* Removes padding */
+  margin: 0; /* Removes margins */
+}
 
+.content-box {
+  padding-left: 20px; /* Add padding for content alignment if necessary */
+}
+
+#ingredients-box ul {
+  list-style-type: disc; /* Enables bullet points */
+  padding-left: 1em; /* Provides some space for the bullets */
+  align-items: left;
+}
 .generated-recipe p:last-child {
   margin-top: 20px;
   font-weight: normal;
+}
+
+.loading-container {
+  margin-top: -2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 70vh; /* Full viewport height to center vertically */
+  text-align: center; /* Centers the text horizontally */
+  gap: 5em; /* Adds more space between the text and the GIF */
+  background: url('../../images/group33.png') no-repeat center center fixed; 
+
+}
+
+/* Make the GIF slightly larger */
+.loading-container img {
+  width: 100%; /* Increase width */
+  max-width: 250px; /* Set a maximum width */
 }
 
 @media screen and (min-width: 768px) {
@@ -78,6 +113,24 @@
   height: 20em; /* Fixed height */
   overflow: hidden;
   position: relative;
-  margin-bottom: 2em; /* Add spacing below the image */
+  margin-bottom: 1.5em; /* Add spacing below the image */
 }
 }
+
+.recipe-button {
+  padding: 1rem; /* Standardized padding */
+  width: 90%; /* Set a specific width for both buttons */
+  text-align: center; /* Center button text */
+  margin: 10px; /* Space around the buttons */
+  background-color: #1ABC9C;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.recipe-button:hover {
+  background-color: #16a085; /* Slightly darker shade on hover */
+}
+

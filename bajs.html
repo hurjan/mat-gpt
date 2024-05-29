@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Fetcher</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .recipe {
+            margin: 20px;
+        }
+        .recipe-title {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .recipe-ingredients, .recipe-instructions, .recipe-time {
+            margin-top: 10px;
+        }
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="recipe">
+        <p class="recipe-title"></p>
+        <p class="recipe-ingredients"></p>
+        <p class="recipe-instructions"></p>
+        <p class="recipe-time"></p>
+        <p class="error"></p>
+    </div>
+    <script>
+        async function fetchRecipe() {
+            console.log('Starting fetchRecipe function');
+            try {
+                console.log('Sending fetch request to API');
+                const response = await fetch('https://localhost:7251/Recipe/GenerateRecipe?query=asd&userId=1');
+                console.log('Fetch request completed');
+
+                if (!response.ok) {
+                    console.log('Response not OK', response);
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+
+                console.log('Response OK, converting to JSON');
+                const data = await response.json();
+                console.log('JSON conversion completed', data);
+
+                document.querySelector('.recipe-title').textContent = `Title: ${data.recipe.title}`;
+                document.querySelector('.recipe-ingredients').textContent = `Ingredients: ${data.recipe.ingredients}`;
+                document.querySelector('.recipe-instructions').textContent = `Instructions: ${data.recipe.instructions}`;
+                document.querySelector('.recipe-time').textContent = `Cooking Time: ${data.recipe.cookingTime} minutes`;
+                
+                console.log('DOM updated with recipe data');
+            } catch (error) {
+                console.error('Error fetching the recipe:', error);
+                document.querySelector('.error').textContent = `Error fetching the recipe: ${error.message}`;
+            }
+        }
+
+        console.log('Calling fetchRecipe function');
+        fetchRecipe();
+    </script>
+</body>
+</html>
