@@ -48,8 +48,8 @@ function CreateRecipe() {
 
   return (
     <>
-      <a href="/diet"><button className="ArrowButton">&lt;</button></a>
     <div className="recipe-container">
+      <a href="/diet"><button className="ArrowButton">&lt;</button></a>
       <p className="label create-recipe-title">Create Recipe</p>
       
       <div className='ingredients-input'>
