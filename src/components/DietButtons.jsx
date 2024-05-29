@@ -1,24 +1,19 @@
-import React, { useState } from 'react';
+import { useUserPreferences } from './context/UserPreferencesContext';
 import "./styles/Buttons.css";
 
 function DietButtons() {
-  const [activeButtons, setActiveButtons] = useState([]);
+  const { diet, setDiet, addOrRemove } = useUserPreferences();
 
-  const handleButtonClick = (diet) => {
-    setActiveButtons(prevState => {
-      if (prevState.includes(diet)) {
-        return prevState.filter(item => item !== diet);
-      } else {
-        return [...prevState, diet];
-      }
-    });
+  const handleButtonClick = (item) => {
+    addOrRemove(diet, item, setDiet); 
   };
+
 
   return (
     <div className="button-container">
       <div className="buttoncontent">
         <button
-          className={`dietButton ${activeButtons.includes('Vegan') ? 'active' : ''}`}
+          className={`dietButton ${diet.includes('Vegan') ? 'active' : ''}`}
           onClick={() => handleButtonClick('Vegan')}
         >
           <div className="image-container">
@@ -29,7 +24,7 @@ function DietButtons() {
       </div>
       <div className="buttoncontent">
         <button
-          className={`dietButton ${activeButtons.includes('Vego') ? 'active' : ''}`}
+          className={`dietButton ${diet.includes('Vego') ? 'active' : ''}`}
           onClick={() => handleButtonClick('Vego')}
         >
           <div className="image-container">
@@ -40,7 +35,7 @@ function DietButtons() {
       </div>
       <div className="buttoncontent">
         <button
-          className={`dietButton ${activeButtons.includes('None') ? 'active' : ''}`}
+          className={`dietButton ${diet.includes('None') ? 'active' : ''}`}
           onClick={() => handleButtonClick('None')}
         >
           <div className="image-container">
@@ -51,7 +46,7 @@ function DietButtons() {
       </div>
       <div className="buttoncontent">
         <button
-          className={`dietButton ${activeButtons.includes('Foodmap') ? 'active' : ''}`}
+          className={`dietButton ${diet.includes('Foodmap') ? 'active' : ''}`}
           onClick={() => handleButtonClick('Foodmap')}
         >
           <div className="image-container">
@@ -62,7 +57,7 @@ function DietButtons() {
       </div>
       <div className="buttoncontent">
         <button
-          className={`dietButton ${activeButtons.includes('Halal') ? 'active' : ''}`}
+          className={`dietButton ${diet.includes('Halal') ? 'active' : ''}`}
           onClick={() => handleButtonClick('Halal')}
         >
           <div className="image-container">
@@ -73,7 +68,7 @@ function DietButtons() {
       </div>
       <div className="buttoncontent">
         <button
-          className={`dietButton ${activeButtons.includes('Keto') ? 'active' : ''}`}
+          className={`dietButton ${diet.includes('Keto') ? 'active' : ''}`}
           onClick={() => handleButtonClick('Keto')}
         >
           <div className="image-container">
