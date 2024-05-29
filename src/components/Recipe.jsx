@@ -14,10 +14,9 @@ function Recipe() {
   const navigate = useNavigate();
 
   // Define GIFs array
-  const gifs = ['snurr1.gif', 'snurr2.gif', 'snurr3.gif', 'snurr4.gif',  'snurr5.gif', 'snurr6.gif', 'snurr7.gif', 'snurr9.gif'];
+  const gifs = ['snurr1.gif', 'snurr2.gif', 'snurr3.gif', 'snurr4.gif', 'snurr5.gif', 'snurr6.gif', 'snurr7.gif'];
 
   // Function to select a random GIF
-
   const selectRandomGif = () => {
     const randomIndex = Math.floor(Math.random() * gifs.length);
     return `../../images/${gifs[randomIndex]}`;
@@ -38,15 +37,15 @@ function Recipe() {
 
     try {
       const response = await fetch(url);
-    
+
       if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`);
       }
-        const data = response.json();
 
-        setRecipe(data.recipe);
-        setImageUrl(data.imageUrl);
-        setIsLoading(false); // Stop showing the loading indicator after 1 minute
+      const data = await response.json(); // Await the response.json() call
+
+      setRecipe(data.recipe);
+      setImageUrl(data.imageUrl);
     } catch (error) {
       console.error('Error fetching recipe:', error);
       setError(`Failed to fetch recipe: ${error.message}`);
@@ -57,6 +56,7 @@ function Recipe() {
 
   useEffect(() => {
     fetchRecipe();
+    // Only run fetchRecipe on initial render and when dependencies change
   }, [query, userId, cookingTime, servings]);
 
   const handleRegenerate = () => {
@@ -79,19 +79,19 @@ function Recipe() {
         <div className="loading-container">
           <p>Generating, please wait...</p>
           <img src="../../images/Group33.png" alt="Decorative" style={{
-  opacity: '0.5',
-  position: 'absolute',
-  zIndex: '-1',
-  top: '20%',
-  left: '50%',
-  marginTop: '-5em',
-  transform: 'translateX(-50%)', // Center the image horizontally
-  minWidth: '115vw', // 50% of the viewport width
-  height: 'auto', // Auto height to maintain aspect ratio
-  objectFit: 'cover',
-  filter: 'blur(5px)' // Retaining the blur effect
-}} />
-<img src={loadingImage} alt="Loading..." />
+            opacity: '0.5',
+            position: 'absolute',
+            zIndex: '-1',
+            top: '20%',
+            left: '48%',
+            marginTop: '-5em',
+            transform: 'translateX(-50%)', // Center the image horizontally
+            minWidth: '60vh', // 50% of the viewport width
+            height: 'auto', // Auto height to maintain aspect ratio
+            objectFit: 'cover',
+            filter: 'blur(5px)' // Retaining the blur effect
+          }} />
+          <img src={loadingImage} alt="Loading..." />
         </div>
       )}
       {error && <div>Error: {error}</div>}
@@ -105,12 +105,12 @@ function Recipe() {
           <p>Ingredients</p>
           <div className="content-box">
             <div id="ingredients-box">
-                <ul>
-                  {recipe.ingredients.split(', ').map((ingredient, index) => (
-                    <li key={index}>{ingredient}</li>
-                  ))}
-                </ul>
-              </div>
+              <ul>
+                {recipe.ingredients.split(', ').map((ingredient, index) => (
+                  <li key={index}>{ingredient}</li>
+                ))}
+              </ul>
+            </div>
           </div>
           <p>Instructions</p>
           <div className="content-box">
