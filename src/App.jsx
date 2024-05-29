@@ -14,11 +14,11 @@ import Groceries from "./components/pages/Groceries";
 import LoginPage from "./components/pages/LoginPage.jsx";
 import SignUp from "./components/pages/SignUp.jsx";
 import GeneratedRecipe from "./components/pages/GeneratedRecipe";
+import { UserPreferencesProvider } from './context/UserPreferencesContext.jsx'; 
 
 import Recipe from "./components/Recipe.jsx";
 
 // import Recipe from './components/Recipe';
-import { UserPreferencesProvider } from './components/context/UserPreferencesContext.jsx'; 
 
 
 function App() {
@@ -28,7 +28,7 @@ function App() {
   return (
 
     <UserPreferencesProvider>
-      <Router>
+    
         <div className="App">
           {/* Header and Navbar always rendered */}
           <Header />
@@ -50,7 +50,8 @@ function App() {
             </Routes>
           </div>
         </div>
-      </Router>
+        </div>
+     
     </UserPreferencesProvider>
 
   );
