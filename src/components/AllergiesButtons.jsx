@@ -1,11 +1,11 @@
-import { useUserPreferences } from './contexts/UserPreferencesContext'; 
+import { useUserPreferences } from './contexts/UserPreferencesContext'; // Ensure this path is correct
 import "./styles/Buttons.css";
 
 function AllergiesButtons() {
-  const { allergies, addOrRemove } = useUserPreferences();
+  const { allergies, setAllergies, addOrRemove } = useUserPreferences();
 
   const handleButtonClick = (item) => {
-    addOrRemove(allergies, item);
+    addOrRemove(allergies, item, setAllergies); 
   };
 
 

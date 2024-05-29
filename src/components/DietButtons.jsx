@@ -1,11 +1,11 @@
-import { useUserPreferences } from "./contexts/UserPreferencesContext.jsx" ; 
+import { useUserPreferences } from './contexts/UserPreferencesContext';
 import "./styles/Buttons.css";
 
 function DietButtons() {
-  const { diet, addOrRemove } = useUserPreferences();
+  const { diet, setDiet, addOrRemove } = useUserPreferences();
 
   const handleButtonClick = (item) => {
-    addOrRemove(diet, item);
+    addOrRemove(diet, item, setDiet); 
   };
 
 
