@@ -13,7 +13,7 @@ import LoginPage from "./components/pages/LoginPage.jsx";
 import SignUp from "./components/pages/SignUp.jsx";
 import GeneratedRecipe from "./components/pages/GeneratedRecipe";
 // import Recipe from './components/Recipe';
-import { UserPreferencesProvider } from './components/contexts/UserPreferencesContext.jsx'; 
+import { UserPreferencesProvider } from './components/context/UserPreferencesContext.jsx'; 
 
 function App() {
   return (

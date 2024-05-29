@@ -1,4 +1,4 @@
-import { useUserPreferences } from './contexts/UserPreferencesContext';
+import { useUserPreferences } from './context/UserPreferencesContext';
 import "./styles/Buttons.css";
 
 function DietButtons() {
