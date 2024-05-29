@@ -48,6 +48,7 @@ function CreateRecipe() {
 
   return (
     <div className="recipe-container">
+
       <p className="label create-recipe-title">Create Recipe</p>
       
       <div className='ingredients-input'>
@@ -63,6 +64,7 @@ function CreateRecipe() {
       </div>
 
       <p className="cooking-method label" onClick={toggleCookingMethods}>
+
         Cooking method {showCookingMethods ? '▲' : '▼'}
       </p>
       <div className={`create-recipe-buttons-wrapper ${showCookingMethods ? 'show' : ''}`}>

@@ -1,7 +1,9 @@
+
 import React, { useContext, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { RecipeContext } from '../context/RecipeContext';
 import "./styles/GeneratedRecipe.css";
+
 
 function Recipe() {
   const { queryParams } = useContext(RecipeContext);

@@ -26,15 +26,18 @@
 }
 
 .ArrowButton {
+  position: absolute;
+  top: 0;
+  left: 0;
   background-color: #1ABC9C;
   padding: .8rem 1.2rem;
-  margin-top: 1.5rem;
-  margin-left: 1.5rem;
   border-radius: 5px;
   border: none;
   font-size: 1.25rem;
-}
+  margin: 2rem;
 
+
+}
 .button-container {
   display: flex;
   flex-wrap: wrap;
@@ -65,9 +68,6 @@
   width: 4rem;
 }
 
-.allergieButton img {
-  width: 3.5rem;
-}
 
 .button-text {
   margin-top: auto;
@@ -75,6 +75,7 @@
 }
 
 .nextButton {
+  margin-bottom: 2rem;
   padding: 1rem 7.5rem;
   background-color: #1ABC9C;
   border: none;
@@ -95,6 +96,11 @@
   border-bottom: 4px solid #1ABC9C;
   border-radius: 10px;
 }
+.toggle-heading {
+  cursor: pointer;
+  font-weight: bold;
+}
+
 
 button, .landingButton1, .landingButton2, .dietButton, .allergieButton, .nextButton {
   letter-spacing: .5px;
@@ -143,4 +149,4 @@ button, .landingButton1, .landingButton2, .dietButton, .allergieButton, .nextBut
   .dietContainer p {
     font-size: 2rem;
   }
-}
+} 
