@@ -19,5 +19,6 @@ export const UserPreferencesProvider = ({ children }) => {
   );
 };
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const useUserPreferences = () => useContext(UserPreferencesContext);
 
