@@ -79,7 +79,7 @@ function Recipe() {
         <div className="loading-container">
           <p>Generating, please wait...</p>
           <img src="../../images/Group33.png" alt="Decorative" style={{
-            opacity: '0.5',
+            opacity: '0.4',
             position: 'absolute',
             zIndex: '-1',
             top: '20%',
@@ -89,7 +89,7 @@ function Recipe() {
             minWidth: '60vh', // 50% of the viewport width
             height: 'auto', // Auto height to maintain aspect ratio
             objectFit: 'cover',
-            filter: 'blur(5px)' // Retaining the blur effect
+            filter: 'blur(6px)' // Retaining the blur effect
           }} />
           <img src={loadingImage} alt="Loading..." />
         </div>
