@@ -52,7 +52,7 @@ function DietButtons() {
           <div className="image-container">
             <img src={'/images/checklist.png'} alt="Foodmap image" />
           </div>
-          <span className="button-text">Foodmap</span>
+          <span className="button-text">Fodmap</span>
         </button>
       </div>
       <div className="buttoncontent">
