@@ -10,6 +10,7 @@ RUN npm install
 COPY . .
 
 RUN npm run build
+EXPOSE 8080
 
-FROM httpd:2.4 AS server
-COPY --from=build /app/dist/ /usr/local/apache2/htdocs/
+ENTRYPOINT ["npm","run","preview"]
+
